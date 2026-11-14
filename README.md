@@ -1,27 +1,68 @@
-# AngularApp2
+# FleetDesk – Vehicle Document Management
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0.
+FleetDesk is a web application built with Angular for managing and reviewing vehicle documents and receipts.
 
-## Development server
+The application allows users to select a vehicle, view its associated records and search through them using different filters. All data is stored locally in JSON files, so no backend or API is required.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- Vehicle selection through a sidebar.
+- Display of records belonging to the selected vehicle.
+- Search by serial number, driver, date range and approval status.
+- Combination of multiple search filters.
+- Angular Material data table with pagination.
+- Visual distinction between approved and cancelled documents.
+- Responsive layout for different screen sizes.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies
+
+- Angular 18
+- TypeScript
+- Angular Material
+- RxJS
+- Reactive Forms
+- HTML and CSS
+- JSON local data files
+
+## Project structure
+
+The application is separated into components responsible for vehicle navigation, the toolbar and document search.
+A shared VehicleService handles the selected vehicle and allows the relevant components to stay synchronized.
+The search component handles the filters and displays the records associated with the currently selected vehicle.
+
+## Data
+
+The application uses three local JSON files:
+
+- `vehicles.json` – available vehicles.
+- `drivers.json` – available drivers.
+- `records.json` – vehicle document records.
+
+No backend connection is needed.
+
+## Getting started
+
+Requirements: Node.js and npm.
+
+Clone the repository and run:
+
+```bash
+npm install
+npm start
+```
+
+Open http://localhost:4200/ in your browser.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To create a production build:
 
-## Running unit tests
+```bash
+npm run build
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Production files are generated in the `dist/` directory.
 
-## Running end-to-end tests
+## About
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project was developed as an Angular application to practice component-based architecture, services, data filtering, Angular Material and communication between components.

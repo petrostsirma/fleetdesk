@@ -1,0 +1,14 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened class="vehicle-sidenav">
+    <div class="side-heading"><span class="eyebrow">FLEET</span><h2>Vehicles</h2><span class="vehicle-count">{{ vehicles.length }}</span></div>
+    <mat-nav-list aria-label="Available vehicles">
+      <button mat-list-item type="button" *ngFor="let vehicle of vehicles" (click)="select(vehicle)" [class.selected]="selectedVehicle?.id === vehicle.id" [attr.aria-pressed]="selectedVehicle?.id === vehicle.id">
+        <span class="vehicle-icon" matListItemAvatar>▣</span><span matListItemTitle>{{ vehicle.plate }}</span><span matListItemLine>Vehicle {{ vehicle.id }}</span>
+        <span class="active-dot" *ngIf="selectedVehicle?.id === vehicle.id"></span>
+      </button>
+    </mat-nav-list><div class="side-footer"><span class="online-dot"></span> Fleet data loaded</div>
+  </mat-sidenav><mat-sidenav-content><ng-content></ng-content></mat-sidenav-content>
+</mat-sidenav-container>
+
+  
+  

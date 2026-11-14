@@ -1,0 +1,1 @@
+:host{display:block;min-height:100vh;background:#f4f7fb}.app-layout{height:calc(100vh - 68px)}app-sidenav{display:block;height:100%}.workspace{height:100%;overflow:auto}@media(max-width:760px){.app-layout{height:auto;min-height:calc(100vh - 58px)}app-sidenav{height:auto}.workspace{height:auto;min-height:60vh}}

@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { SearchComponent } from './search/search.component';
 
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
-})
-export class AppComponent {
-  title = 'angular-app2';
-}
+@Component({ selector: 'app-root', standalone: true, imports: [SidenavComponent, ToolbarComponent, SearchComponent], templateUrl: './app.component.html', styleUrls: ['./app.component.css'] })
+export class AppComponent {}
